@@ -1,0 +1,75 @@
+// Chart Options
+const options = {
+    chart: {
+        height: 450,
+        width: '100%',
+        type: 'bar',
+        background: '#f4f4f4',
+        foreColor: '#333'
+    },
+    series: [{
+        name: 'Population',
+        data:
+            [
+                8550405,
+                3971883,
+                2720546,
+                2296224,
+                1567442,
+                1563025,
+                1469845,
+                1394928,
+                1300092,
+                1026908,
+            ]
+        }
+    ],
+    xaxis: {
+        categories: ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Philadelphia', 'Phoenix', 'San Antonio', 'San Diego', 'Dallas', 'San Jose']
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false
+        }
+    },
+    fill: {
+        colors: ['#f44336']
+    },
+    dataLabels: {
+        enabled: false
+    },
+    title: {
+        text: 'Largest US Cities By Population',
+        align: 'center',  // Align title to center
+        margin: 10,        // Set margin for title
+        offsetY: 20,       // Offset title vertically
+        style: {
+            fontSize: '1.5rem'  // Set font size for title
+        }
+    }
+
+};
+
+// Init Charts
+const chart = new ApexCharts(document.querySelector('#chart'), options);
+
+// Render Chart
+chart.render();
+
+// Event Method Example - This makes two buttons that let the user change the chart orientation...
+document.querySelector('#horizontalButton').addEventListener('click', () => chart.updateOptions({
+    plotOptions: {
+        bar: {
+            horizontal: true
+        }
+    }
+}))
+
+// Event Method Example - This makes two buttons that let the user change the chart orientation...
+document.querySelector('#verticalButton').addEventListener('click', () => chart.updateOptions({
+    plotOptions: {
+        bar: {
+            horizontal: false
+        }
+    }
+}))
