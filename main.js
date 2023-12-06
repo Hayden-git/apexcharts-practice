@@ -265,12 +265,18 @@ var options = {
     ]
   }],
     chart: {
-    height: 350,
-    type: 'line',
+      height: 350,
+      type: 'line',
+      background: 'transparent',
+      foreColor: '#333',
   },
   title: {
     text: 'EXPL Fake Stock Data',
-    align: 'left'
+    align: 'left',
+    style: {
+        fontSize: '20px',
+        color: '#333',
+    },
   },
   stroke: {
     width: [3, 1]
@@ -290,9 +296,21 @@ var options = {
     }]
   },
   xaxis: {
-    type: 'datetime'
-  }
-  };
+    type: 'datetime',
+    labels: {
+        style: {
+            colors: '#333',
+        },
+    },
+},
+  yaxis: {
+      labels: {
+          style: {
+              colors: '#333',
+          },
+      },
+  },
+};
 
   var chart = new ApexCharts(document.querySelector("#chart"), options);
 

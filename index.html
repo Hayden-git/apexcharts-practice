@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <title>Apex Charts</title>
 
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
-
+    
         .container {
             margin: 70px auto;
             overflow: hidden;
@@ -17,16 +19,18 @@
             text-align: center;
         }
     </style>
+    
 </head>
-<body>
-    <div class="container">
-        <div id="chart"></div>
-        <button id="horizontalButton">Horizontal</button>
-        <button id="verticalButton">Vertical</button>
+<body class="bg-gray-500">
+    <div class="container bg-gray-100 p-8 rounded shadow-md">
+        <div id="chart" class="mb-8"></div>
+        <div class="flex justify-center space-x-4">
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="main.js"></script>
-
 </body>
+
 </html>
